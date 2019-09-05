@@ -1,0 +1,5 @@
+-- migrate
+mvn -Dflyway.configFiles=properties/flyway.properties,properties/database/demodb.properties flyway:migrate
+
+-- repair if some migrations failed
+mvn -Dflyway.configFiles=properties/flyway.properties,properties/database/demodb.properties flyway:repair
